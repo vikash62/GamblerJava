@@ -1,7 +1,7 @@
-package com.blz;
+package com.blz.game;
 
 import java.text.DateFormatSymbols;
-import java.util.Arrays;
+
 
 public class Gambler {
     public static final int BET = 1;
@@ -14,7 +14,7 @@ public class Gambler {
     public static void main(String[] args) {
         DateFormatSymbols monthname = new DateFormatSymbols();
         String[] months = monthname.getMonths();
-        for (MONTH = 1; MONTH < (months.length - 1); MONTH++) {
+        for (MONTH = 0; MONTH < (months.length - 1); MONTH++) {
             String month = months[MONTH];
             System.out.println(month);
             WON = 0;
@@ -53,9 +53,11 @@ public class Gambler {
                 float percent = (((LOSE - WON) / 30) * 100);
                 System.out.println("Luckiest Day:WON($" + getlargest(days, total) + ")");
                 System.out.println("Lose by " + percent + "%");
-            } else System.out.println("Luckiest Day:WON($" + getlargest(days, total) + ")");
-            System.out.println("Month:" + month + ", WON:" + WON + " times," + " LOSE:" + LOSE + " times" + ", Neither Won nor Lose");
-        }
+                break;
+            } else {
+                System.out.println("Luckiest Day:WON($" + getlargest(days, total) + ")");
+                System.out.println("Month:" + month + ", WON:" + WON + " times," + " LOSE:" + LOSE + " times" + ", Neither Won nor Lose");
+            }}
     }
 
     private static int getlargest(int[] days, int total) {
