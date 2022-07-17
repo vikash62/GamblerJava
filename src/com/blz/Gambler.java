@@ -8,4 +8,4 @@ public class Gambler {
         int won = 0;
         System.out.println("Initial Stake is " +AMOUNT+ "$ and bet is " +BET+"$");
     }
-}
+} 
