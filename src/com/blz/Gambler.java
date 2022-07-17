@@ -1,4 +1,4 @@
-package com.blz.game;
+package com.blz;
 
 import java.text.DateFormatSymbols;
 
